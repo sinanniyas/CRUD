@@ -1,0 +1,6 @@
+node_modules
+dist
+.vscode
+app_front/node_modules
+server/node_modules
+server/.env
