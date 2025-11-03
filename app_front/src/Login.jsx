@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/auth/login", { email, password });
+      const res = await axios.post("https://crud-wqs3.onrender.com/auth/login", { email, password });
       localStorage.setItem("token", res.data.token); 
       alert("Login successful!");
       navigate("/user"); 

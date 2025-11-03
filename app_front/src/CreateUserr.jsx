@@ -13,7 +13,7 @@ const CreateUser = () => {
   const submit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/createuser", { name, email, age })
+      .post("https://crud-wqs3.onrender.com/createuser", { name, email, age })
       .then(result =>{  console.log(result)
         navigate('/user')
       })

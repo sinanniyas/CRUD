@@ -13,7 +13,7 @@ const Updateuser = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getUser/' + id)
+    axios.get('https://crud-wqs3.onrender.com/getUser/' + id)
       .then((result) => {console.log(result.data)
       setname(result.data.name)
       setemail(result.data.email)
@@ -23,7 +23,7 @@ const Updateuser = () => {
   const update = (e) =>{
     e.preventDefault();
   axios
-  .put('http://localhost:3001/updateUser/' + id, { name, email, age })
+  .put('https://crud-wqs3.onrender.com/updateUser/' + id, { name, email, age })
   .then(result => {  
     console.log(result);
     navigate('/user');

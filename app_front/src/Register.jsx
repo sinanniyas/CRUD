@@ -13,7 +13,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/auth/register", {
+      await axios.post("https://crud-wqs3.onrender.com/auth/register", {
         username,
         email,
         password,
@@ -68,7 +68,7 @@ const Register = () => {
     console.log("Google token:", id_token);
     try {
       const res = await axios.post(
-        "http://localhost:3001/auth/google",
+        "https://crud-wqs3.onrender.com/auth/google",
         { token: id_token }   // ✅ send correct token
       );
       console.log("Logged in user:", res.data);

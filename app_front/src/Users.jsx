@@ -16,7 +16,7 @@ const Users = () => {
     const fetchUsers = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3001/users?q=${searchTerm}&page=${page}&limit=${limit}`
+          `https://crud-wqs3.onrender.com/users?q=${searchTerm}&page=${page}&limit=${limit}`
         );
         setUsers(res.data.users);
         setPages(res.data.pages);
@@ -30,7 +30,7 @@ const Users = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteUser/" + id)
+      .delete("https://crud-wqs3.onrender.com/deleteUser/" + id)
       .then(() => {
         setUsers(users.filter((user) => user._id !== id));
       })

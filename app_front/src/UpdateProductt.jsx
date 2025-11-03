@@ -13,7 +13,7 @@ const Updateproduct = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getproduct/' + id)
+    axios.get('https://crud-wqs3.onrender.com/getproduct/' + id)
       .then((result) => {console.log(result.data)
       setTitle(result.data.title)
       setcategory(result.data.category)
@@ -25,7 +25,7 @@ const Updateproduct = () => {
   const update = (e) =>{
     e.preventDefault();
   axios
-  .put('http://localhost:3001/updateproduct/' + id, { title ,category, price, stock })
+  .put('https://crud-wqs3.onrender.com/updateproduct/' + id, { title ,category, price, stock })
   .then(result => {  
     console.log(result);
     navigate('/products');

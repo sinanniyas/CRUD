@@ -13,7 +13,7 @@ const Updateuser = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getBook/' + id)
+    axios.get('https://crud-wqs3.onrender.com/getBook/' + id)
       .then((result) => {console.log(result.data)
       setTitle(result.data.title)
       setName(result.data.name)
@@ -25,7 +25,7 @@ const Updateuser = () => {
   const update = (e) =>{
     e.preventDefault();
   axios
-  .put('http://localhost:3001/updateBook/' + id, { title ,name, price, pages })
+  .put('https://crud-wqs3.onrender.com/updateBook/' + id, { title ,name, price, pages })
   .then(result => {  
     console.log(result);
     navigate('/books');

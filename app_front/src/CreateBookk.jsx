@@ -14,7 +14,7 @@ const CreateBook = () => {
   const submit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/createb", { title, name, price, pages })
+      .post("https://crud-wqs3.onrender.com/createb", { title, name, price, pages })
       .then((result) => {
         console.log(result);
         navigate("/books");

@@ -16,7 +16,7 @@ function Books() {
     const fetchBooks = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3001/books?q=${searchTerm}&page=${page}&limit=${limit}`
+          `https://crud-wqs3.onrender.com/books?q=${searchTerm}&page=${page}&limit=${limit}`
         );
         setBooks(res.data.books);
         setPages(res.data.pages);
@@ -30,7 +30,7 @@ function Books() {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteBook/" + id)
+      .delete("https://crud-wqs3.onrender.com/deleteBook/" + id)
       .then(() => {
         setBooks(books.filter((book) => book._id !== id));
       })

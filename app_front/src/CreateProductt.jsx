@@ -42,7 +42,7 @@ const submit = (e) => {
   }
 
   axios
-    .post("http://localhost:3001/createProducts", {
+    .post("https://crud-wqs3.onrender.com/createProducts", {
       title,
       category,
       price,

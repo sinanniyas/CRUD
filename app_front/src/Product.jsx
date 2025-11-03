@@ -16,7 +16,7 @@ function Product() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3001/products?q=${searchTerm}&page=${page}&limit=${limit}`
+          `https://crud-wqs3.onrender.com/products?q=${searchTerm}&page=${page}&limit=${limit}`
         );
         setProduct(res.data.products);
         setPages(res.data.pages);
@@ -30,7 +30,7 @@ function Product() {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteproduct/" + id)
+      .delete("https://crud-wqs3.onrender.com/deleteproduct/" + id)
       .then(() => {
         setProduct(product.filter((p) => p._id !== id));
       })
